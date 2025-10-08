@@ -12,6 +12,10 @@ OLLAMA_MODEL = os.getenv("OLLAMA_MODEL", "tinyllama")
 def home():
     return render_template("index.html")
 
+@app.get("/api/health")
+def health():
+    return {"status":"ok"}
+
 # Stage 1: echo
 @app.post("/api/echo")
 def echo():
