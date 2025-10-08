@@ -14,7 +14,7 @@ def home():
 
 @app.get("/api/health")
 def health():
-    return {"status":"ok"}
+    return jsonify({"status":"ok"}), 200
 
 # Stage 1: echo
 @app.post("/api/echo")
